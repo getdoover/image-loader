@@ -38,8 +38,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
+    - cd remote-component
     - run: npm install
     - run: npm run build 
+    - cd ..
 
 
   # Deploy job to deploy bundled static content to GitHub Pages
