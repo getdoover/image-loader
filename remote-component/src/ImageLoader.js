@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 
-export default class DooverTables extends RemoteAccess {
+export default class ImageLoader extends RemoteAccess {
     constructor(props) {
         super(props);
         this.state = {

@@ -6,7 +6,7 @@ const ConcatenatePlugin = require('./ConcatPlugin');
 
 
 module.exports = {
-  entry: './src/DooverTables.js',
+  entry: './src/ImageLoader.js',
   mode: 'development',
   // mode: 'production',
 
@@ -41,13 +41,13 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'DooverTables',
-      filename: 'DooverTables.js',
+      name: 'DooverImageLoader',
+      filename: 'DooverImageLoader.js',
       remotes: {
         doover_home : 'doover_home@[window.dooverRemoteAccess_remoteUrl]'
       },
       exposes: {
-        './DooverTables': './src/DooverTables',
+        './DooverImageLoader': './src/ImageLoader',
       },
       // adds react as shared module
       // version is inferred from package.json
@@ -68,7 +68,7 @@ module.exports = {
     new ConcatenatePlugin({
       source: "./dist",
       destination: "../assets",
-      name: 'DooverTables.js',
+      name: 'ImageLoader.js',
       ignore: 'main.js'
     }),
     new ExternalTemplateRemotesPlugin(),

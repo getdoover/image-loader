@@ -5,11 +5,11 @@
     "main": "index.js",
     "scripts": {
       "build": "webpack --config webpack.config.js",
-      "start": "webpack --config webpack.config.js && serve -s ../assets -l 8001",
+      "start": "webpack --config webpack.config.js && serve -s ../assets -l 8003",
       "watch": "webpack --config webpack.config.js --watch --mode development"
       
     },
-    "author": "Sidney Jackson",
+    "author": "Jarrod Jackson",
     "license": "ISC",
     "dependencies": {
       "@babel/preset-env": "^7.21.5",
