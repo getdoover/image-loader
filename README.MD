@@ -1,2 +1,2 @@
-# doover_tables
-A generic doover remote-component for displaying tables of data in the Doover ui
+# Doover Image Loader
+A generic doover remote-component for displaying images of data in the Doover ui
