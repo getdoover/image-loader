@@ -41,13 +41,13 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'DooverImageLoader',
-      filename: 'DooverImageLoader.js',
+      name: 'ImageLoader',
+      filename: 'ImageLoader.js',
       remotes: {
         doover_home : 'doover_home@[window.dooverRemoteAccess_remoteUrl]'
       },
       exposes: {
-        './DooverImageLoader': './src/ImageLoader',
+        './ImageLoader': './src/ImageLoader',
       },
       // adds react as shared module
       // version is inferred from package.json

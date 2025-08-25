@@ -17,7 +17,10 @@ export default class ImageLoader extends RemoteAccess {
     componentDidMount() {
         // Get the image URL from props or UI state
         const imageUrl = this.props.imageUrl || this.getUiState()?.reported?.image_url || '';
-        
+        console.log('ImageLoader props', this.props);
+        console.log('ImageLoader uiState', this.getUiState());
+
+        console.log('ImageLoader mounted', imageUrl);
         if (imageUrl) {
             this.setState({
                 imageUrl: imageUrl,
@@ -34,7 +37,7 @@ export default class ImageLoader extends RemoteAccess {
     getMaxHeight() {
       const uiState = this.getUiState();
       if (uiState?.reported?.max_height) {
-        return uiState.reported.max_height;
+        return `${uiState.reported.max_height}px`;
       }
       return '200px';
     }
@@ -42,6 +45,7 @@ export default class ImageLoader extends RemoteAccess {
     render() {
         const { imageUrl, isLoading, error } = this.state;
         var height = this.getMaxHeight();
+        console.log('ImageLoader rendered', imageUrl, height);
 
         return (
             <ThemeProvider theme={this.getTheme()}>
@@ -67,7 +71,7 @@ export default class ImageLoader extends RemoteAccess {
                             alt="Remote component image"
                             style={{
                                 maxWidth: '100%',
-                                maxHeight: '100%',
+                                maxHeight: height,
                                 objectFit: 'contain'
                             }}
                             onError={() => this.setState({ error: 'Failed to load image' })}
