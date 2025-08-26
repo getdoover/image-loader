@@ -67,7 +67,7 @@ module.exports = {
     }),
     new ConcatenatePlugin({
       source: "./dist",
-      destination: "../assets",
+      destination: "./assets",
       name: 'ImageLoader.js',
       ignore: 'main.js'
     }),
