@@ -17,16 +17,15 @@ from pydoover import ui
 ...
 
 class ExampleUI:
-
-def __init__(self, config):
-	self.config = config
-    self.logo = ui.RemoteComponent(
-    "doover_logo",
-    "Doover Logo",
-	component_url="https://getdoover.github.io/image-loader/ImageLoader.js",
-	image_url="https://doover.com/wp-content/uploads/2025/02/Blue-Background-2.png",
-	max_height="100px",
-)
+    def __init__(self, config):
+        self.config = config
+        self.logo = ui.RemoteComponent(
+        "doover_logo",
+        "Doover Logo",
+        component_url="https://getdoover.github.io/image-loader/ImageLoader.js",
+        image_url="https://doover.com/wp-content/uploads/2025/02/Blue-Background-2.png",
+        max_height="100px",
+    )
 
 ```
 ## Features
